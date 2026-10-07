@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Migration</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Firebase Migration</h1>
+
+        <p>
+            Source and destination database overview
+        </p>
+    </header>
+
+    <main>
+        <div class="databases">
+            <!--Source-->
+            <section class="database-card">
+                <h2>Source Database</h2>
+
+                <div id="source-status" class="status">
+                    Loading...
+                </div>
+
+                <div class="" statistics>
+                    <div>
+                        <span>Collections</span>
+
+                        <strong id="source-collections">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+
+                        <span>Documents</span>
+
+                        <strong id="source-documents">
+                            -
+                        </strong>
+                    </div>
+                </div>
+
+                <h3>Collections</h3>
+
+                <div id="source-list">
+                    Loading.....
+                </div>
+            </section>
+
+            <!--Destination-->
+            <section class="database-card">
+                <h2>Destination Database</h2>
+                <div id="destination-status">
+                    Loading....
+                </div>
+
+                <div class="statistics">
+
+                    <div>
+                        <span>Collections</span>
+
+                        <strong id="destination-collections">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Documents</span>
+
+                        <strong id="destination-documents">
+                            -
+                        </strong>
+                    </div>
+                </div>
+
+                <h3>Collections</h3>
+
+                <div id="destination-list">
+                    Loading....
+                </div>
+            </section>
+        </div>
+
+        <div class="actions">
+
+            <button id="refresh-button" onclick="loadDatabaseInformation()">
+                Refresh
+            </button>
+
+            <button id="migration-button" onclick="startMigration()">
+                StartMigration
+            </button>
+        </div>
+
+        <div id="migration-status" class="migration-status">
+            Migration status: IDLE
+        </div>
+
+        <div id="verification-result" class="verification-result">
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
